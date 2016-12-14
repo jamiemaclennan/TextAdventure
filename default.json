@@ -1,0 +1,76 @@
+{
+    "init": {
+        "startingRoom": "EmptyRoom"
+    },
+    "rooms": { 
+        "EmptyRoom" : {
+            "caption": "Empty Room",
+            "entryDescription": "You have entered an empty room.",
+            "description": "This is just a boring empty room.",
+            "doors": {
+                "n" : {
+                    "description": "You see light coming through a door.",
+                    "destination": "Topiary"
+                },
+                "s" : {
+                    "description": "You see a door, but it is very dark",
+                    "destination": "DarkRoom"
+                },
+                "e" : {
+                    "description": "You hear some music coming down a pretty hallway",
+                    "destination": "MusicRoom"
+                },
+                "w" : {
+                    "direction": "w",
+                    "description": "You can't see much down that way, but it smells bad",
+                    "destination": "SmellyRoom"
+                }
+            }
+        },
+        "Topiary": {
+            "caption": "Topiary",
+            "entryDescription": "You have entered a pretty room with plants and light filtering in from above.",
+            "description": "This room has a variety of plants cut to  various animal shapes.  Light filters in through a glass ceiling.  You wonder who takes care of these plants in this empty place.",
+            "doors": {
+                "s" : {
+                    "description": "A dark tunnel heads off to the south.",
+                    "destination": "EmptyRoom"
+                }
+            }
+        },
+        "DarkRoom": {
+            "caption": "Complete Darkness",
+            "entryDescription": "You have entered a completely dark room.",
+            "description": "This room is completely dark, you can't see anything save for a small trickle of light coming from the room to the north.",
+            "doors": {
+                "n" : {
+                    "description": "There is a faint light coming from that direction.",
+                    "destination": "EmptyRoom"
+                }
+            }
+        },
+        "MusicRoom" : {
+            "caption": "Music Room",
+            "class" : "music_room.MusicRoom",
+            "entryDescription": "You have entered a room and there is music playing.",
+            "description": "This room is lit by a small ceiling fan that casts great shadows across the walls and the furniture.  In the corner, a music box plays a simple tune as its crank slowly unwinds.  The question is - who winds it?",
+            "doors": {
+                "w" : {
+                    "description": "There is a doorway to the west leading down a short hallway",
+                    "destination": "EmptyRoom"
+                }
+            }
+        },
+        "SmellyRoom" : {
+            "caption": "Office",
+            "entryDescription": "You have entered what appears to be an office.  There is a horrific smell.",
+            "description": "This is a typically configured office.  You look behind the desk and see that the smell is coming from ... a dead body!",
+            "doors": {
+                "e" : {
+                    "description": "There is a door leading back to the last room.",
+                    "destination": "EmptyRoom"
+                }
+            }
+        }
+    }
+}
