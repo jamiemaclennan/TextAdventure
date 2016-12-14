@@ -10,4 +10,4 @@ class MusicRoom(room.Room):
             print("The music sounds pretty")
             return self
         else:
-            return super(self, adventure, command)
+            return super(MusicRoom, self).process_command(adventure, command)
