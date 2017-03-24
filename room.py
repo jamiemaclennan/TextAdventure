@@ -2,7 +2,7 @@
 
 class Room(dict):
     """ basic room implementation """
-
+    """ comment """
     def process_go(self, adventure, words):
         """ process the go command by looking at the next word """
         direction = words[0]
